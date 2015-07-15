@@ -1,0 +1,26 @@
+URxvt.foreground: Gray
+URxvt.font: xft:inconsolata:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
+URxvt.boldFont: xft:inconsolata:bold:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
+URxvt.depth: 32
+URxvt.background: [90]#000000
+URxvt.saveLines: 12000
+URxvt.scrollBar_right: true
+URxvt.scrollstyle: rxvt
+URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.cursorBlink: true
+URxvt.internalBorder: 6
+URxvt.colorMode: on
+URxvt.perl-ext-common: default,tabbed
+
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+cairo-dock.override-redirect: true
