@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# ~/.xprofile
+#
+
+# echo $@ > ~/xprofile.log
+
+case $1 in
+xmonad)
+	xcompmgr -c &
+	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	xsetroot -cursor_name left_ptr
+	xscreensaver -no-splash &
+	urxvtd -f -o -q
+	trayer --edge top --align right --expand true --SetDockType true --SetPartialStrut true --tint 0x000000 --alpha 0 --transparent true --height 17 --width 10 &
+	feh --bg-scale ~/Pictures/desktop-background.png
+	;;
+*)
+	;;
+esac
