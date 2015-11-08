@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-scale '~/Pictures/vim-shortcuts-blue-1920x1200.png' 
+feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
