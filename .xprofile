@@ -3,7 +3,7 @@
 # ~/.xprofile
 #
 
-# echo $@ > ~/xprofile.log
+echo $@ > ~/xprofile.log
 
 case $1 in
 xmonad)
@@ -13,7 +13,7 @@ xmonad)
 	xscreensaver -no-splash &
 	urxvtd -f -o -q
 	trayer --edge top --align right --expand true --SetDockType true --SetPartialStrut true --tint 0x000000 --alpha 0 --transparent true --height 17 --width 10 &
-	feh --bg-scale ~/Pictures/desktop-background.png
+	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
 	;;
 *)
 	;;
