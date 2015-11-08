@@ -15,6 +15,13 @@ xmonad)
 	trayer --edge top --align right --expand true --SetDockType true --SetPartialStrut true --tint 0x000000 --alpha 0 --transparent true --height 17 --width 10 &
 	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
 	;;
+i3)
+	xcompmgr -c &
+	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	xscreensaver -no-splash &
+	urxvtd -f -o -q
+	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
+	;;
 *)
 	;;
 esac
