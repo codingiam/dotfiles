@@ -12,90 +12,31 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle bundles.
-
-" Vundle, the plug-in manager for Vim.
 Plugin 'gmarik/Vundle.vim'
-
-" Provides database access to many DBMS.
 Plugin 'dbext.vim'
-
-" A Git wrapper so awesome, it should be illegal.
 Plugin 'tpope/vim-fugitive'
-
-" Lightweight support for Ruby's Bundler.
 Plugin 'tpope/vim-bundler'
-
-" Ruby configuration files.
-"Plugin 'vim-ruby/vim-ruby'
-
-" Ruby on Rails power tools.
 Plugin 'tpope/vim-rails.git'
-
-" It's like rails.vim without the Rails.
 Plugin 'tpope/vim-rake'
-
-" Quoting/parenthesizing made simple.
 Plugin 'tpope/vim-surround'
-
-" Wisely add "end" in ruby, endfunction/endif/more in vim script, etc.
 Plugin 'tpope/vim-endwise'
-
-" Perform all your vim insert mode completions with Tab.
 Plugin 'ervandew/supertab'
-
-" Syntax checking hacks for vim.
 Plugin 'scrooloose/syntastic'
-
-" Vim-script library, which provides some utility functions and commands.
 Plugin 'L9'
-
-" Provides convenient ways to quickly reach the buffer/file/command/bookmark/tag you want.
 Plugin 'FuzzyFinder'
-
-" Color scheme.
 Plugin 'wombat256.vim'
-
-" Extremely fast, intuitive mechanism for opening files with a minimal number of keystrokes.
-Plugin 'git://git.wincent.com/command-t.git'
-
-" A tree explorer plugin for vim.
+" Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'https://github.com/wincent/command-t.git'
 Plugin 'scrooloose/nerdtree'
-
-" The ultimate vim statusline utility.
-"Plugin 'Lokaltog/vim-powerline'
-
-" With bufexplorer, you can quickly and easily switch between buffers.
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'bufexplorer.zip'
-
-" Vim Cucumber runtime files.
 Plugin 'tpope/vim-cucumber'
-
-" Vim runtime files for Haml, Sass, and SCSS.
 Plugin 'tpope/vim-haml'
-
-" Vastly improved Javascript indentation and syntax support.
 Plugin 'pangloss/vim-javascript'
-
-" CoffeeScript support for vim.
 Plugin 'kchmck/vim-coffee-script'
-
-" EasyMotion provides a much simpler way to use some motions in vim.
-Plugin 'Lokaltog/vim-easymotion'
-
-" A Vim plugin which shows a git diff in the 'gutter'.
-Plugin 'airblade/vim-gitgutter'
-
-" Vim plugin for browsing the tags of source code files.
-Plugin 'majutsushi/tagbar'
-
-" Vim plugin for commenting.
-Plugin 'scrooloose/nerdcommenter'
-
-" Color scheme.
-"Plugin 'altercation/vim-colors-solarized'
-
-" Leand and mean status/tabline.
-Plugin 'bling/vim-airline'
+" Plugin 'godlygeek/tabular'
+" Plugin 'guns/vim-sexp'
+" Plugin 'tpope/vim-sensible'
 
 call vundle#end()
 
@@ -120,9 +61,6 @@ set wrapscan
 " Enable spell checking.
 set spell
 
-" Relative line numbers
-set relativenumber 
-
 " Show line numbers.
 set number
 
@@ -146,12 +84,6 @@ set ignorecase
 " Override the 'ignorecase' option if the search pattern
 " contains upper case characters.
 set smartcase
-
-" Expand tabs to spaces.
-set expandtab
-
-" Use 2 spaces tabstops.
-set tabstop=2 shiftwidth=2 softtabstop=2
 
 " Copy indent from current line when starting a new line
 " (typing <CR> in Insert mode or when using the "o" or "O"
@@ -179,12 +111,11 @@ set mouse=a
 " good on a dark background. When set to "light", Vim will
 " try to use colors that look good on a light background.
 " Any other value is illegal.
-set background=dark
+" set background=dark
 
 " Color scheme.
 colorscheme wombat256mod
-"colorscheme desert
-"colorscheme solarized
+" colorscheme desert
 
 " Do not close buffers when opening new ones, just hide them.
 set hidden
@@ -192,20 +123,20 @@ set hidden
 set encoding=utf-8
 set showcmd
 
-" Show vim status line.
+" Show vim powerline.
 set laststatus=2
 
 " Disable movement arrows in insert mode.
-"inoremap <Up>      <NOP>
-"inoremap <Down>    <NOP>
-"inoremap <Left>    <NOP>
-"inoremap <Right>   <NOP>
+inoremap <Up>      <NOP>
+inoremap <Down>    <NOP>
+inoremap <Left>    <NOP>
+inoremap <Right>   <NOP>
 
 " Disable movement keys in visual mode.
-noremap <Up>       <NOP>
-noremap <Down>     <NOP>
-noremap <Left>     <NOP>
-noremap <Right>    <NOP>
+" noremap <Up>       <NOP>
+" noremap <Down>     <NOP>
+" noremap <Left>     <NOP>
+" noremap <Right>    <NOP>
 
 " Use Q for formatting the current paragraph (or selection).
 vmap Q gq
@@ -227,20 +158,12 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
-let g:CommandTCursorLeftMap  = ['<Esc>OD', '<LEFT>']
-let g:CommandTCursorRightMap = ['<Esc>OC', '<RIGHT>']
-let g:CommandTSelectNextMap  = ['<Esc>OB', '<DOWN>']
-let g:CommandTSelectPrevMap  = ['<Esc>OA', '<UP>']
-
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<cr>
 nmap <silent> <leader>sv :so $MYVIMRC<cr>
 
-" Shortcut for tagbar
-nmap <F3> :TagbarToggle<CR> 
-
 " Enable color syntax highlighting and do not overwrite highlight colors. 
-"syntax enable
+" syntax enable
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=lightgrey ctermfg=black guibg=#131319 guifg=white
