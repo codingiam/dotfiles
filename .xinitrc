@@ -15,12 +15,3 @@ fi
 
 [ -f /etc/xprofile ] && source /etc/xprofile
 [ -f ~/.xprofile ] && source ~/.xprofile
-
-DEFAULT_SESSION=twm
-
-if [ ! -z "$1" ]; then
-  # exec ck-launch-session $1
-  exec $1
-else
-  exec $DEFAULT_SESSION
-fi

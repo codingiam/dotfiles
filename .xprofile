@@ -3,11 +3,13 @@
 # ~/.xprofile
 #
 
-echo $@ > ~/xprofile.log
+session=${1:-i3}
 
-case $1 in
+# echo $session > ~/xprofile.log
+
+case $session in
 xmonad)
-	xcompmgr -c &
+	compton -bc
 	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 	xsetroot -cursor_name left_ptr
 	xscreensaver -no-splash &
@@ -16,12 +18,13 @@ xmonad)
 	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
 	;;
 i3)
-	xcompmgr -c &
+	compton -bc
 	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-	xscreensaver -no-splash &
+	xautolock -time 15 -locker i3lock &
 	urxvtd -f -o -q
 	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
 	;;
 *)
+	exec $1
 	;;
 esac
