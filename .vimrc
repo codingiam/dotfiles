@@ -26,7 +26,8 @@ Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'wombat256.vim'
 " Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'https://github.com/wincent/command-t.git'
+" Plugin 'https://github.com/wincent/command-t.git'
+Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'bufexplorer.zip'
@@ -126,6 +127,36 @@ set showcmd
 " Show vim powerline.
 set laststatus=2
 
+" Highlight current line
+set cursorline
+
+" Visual autocomplet for command menu
+set wildmenu
+
+" Redraw only when we need
+set lazyredraw
+
+" Highlight matching paranthesis
+set showmatch
+
+" Enable folding
+set foldenable
+
+" Open fold by default
+set foldlevelstart=10
+
+" Max 10 nested folds
+set foldnestmax=10
+
+" Fold by indentation
+set foldmethod=indent
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
 " Disable movement arrows in insert mode.
 inoremap <Up>      <NOP>
 inoremap <Down>    <NOP>
@@ -155,8 +186,13 @@ map <Leader>l :ls<CR>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Key mappings for CommandT.
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+"map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+"map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+"let g:CommandTCursorLeftMap  = ['<Esc>OD', '<LEFT>']
+"let g:CommandTCursorRightMap = ['<Esc>OC', '<RIGHT>']
+"let g:CommandTSelectNextMap  = ['<Esc>OB', '<DOWN>']
+"let g:CommandTSelectPrevMap  = ['<Esc>OA', '<UP>']
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<cr>
