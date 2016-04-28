@@ -18,4 +18,7 @@
 
 ;(cua-mode 1)
 
+(setq-default buffer-quit-function
+ #'(lambda () (message "Are you trying to quit?")))
+
 (provide 'init-local)
