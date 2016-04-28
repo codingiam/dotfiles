@@ -1,15 +1,14 @@
 " This must be first, because it changes other options as side effect.
 set nocompatible
 
-" Required by vundle and pathogen.
+" Required by vundle.
 filetype off
-
-" Load pathogen, vim plugins manager.
-" call pathogen#infect()
 
 " Load vundle, vim plugins manager.
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+" Tell vundle where to store the plugins.
+call vundle#begin('~/.vim/bundle')
 
 " Vundle bundles.
 Plugin 'gmarik/Vundle.vim'
@@ -24,7 +23,8 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
-Plugin 'wombat256.vim'
+" Plugin 'wombat256.vim'
+Plugin 'chriskempson/vim-tomorrow-theme'
 " Plugin 'git://git.wincent.com/command-t.git'
 " Plugin 'https://github.com/wincent/command-t.git'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
@@ -115,7 +115,7 @@ set mouse=a
 " set background=dark
 
 " Color scheme.
-colorscheme wombat256mod
+colorscheme Tomorrow-Night
 " colorscheme desert
 
 " Do not close buffers when opening new ones, just hide them.

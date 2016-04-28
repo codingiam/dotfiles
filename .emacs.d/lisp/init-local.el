@@ -16,4 +16,6 @@
 ;(require-package 'projectile-rails)
 ;(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
+;(cua-mode 1)
+
 (provide 'init-local)
