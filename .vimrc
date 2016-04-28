@@ -11,7 +11,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
 
 " Vundle bundles.
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'dbext.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
@@ -38,6 +38,10 @@ Plugin 'kchmck/vim-coffee-script'
 " Plugin 'godlygeek/tabular'
 " Plugin 'guns/vim-sexp'
 " Plugin 'tpope/vim-sensible'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'Shougo/neocomplete.vim'
 
 call vundle#end()
 
