@@ -7,6 +7,8 @@ session=${1:-i3}
 
 # echo $session > ~/xprofile.log
 
+nvidia-settings --load-config-only
+
 case $session in
 xmonad)
 	compton -bc
@@ -23,6 +25,14 @@ i3)
 	xautolock -time 15 -locker i3lock &
 	urxvtd -f -o -q
 	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
+	;;
+cinnamon-session-cinnamon)
+	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	urxvtd -f -o -q
+	;;
+icewm-session)
+	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	urxvtd -f -o -q
 	;;
 *)
 	exec $1
