@@ -1,8 +1,9 @@
-URxvt.foreground: Gray
+URxvt*dynamicColors: on
+! URxvt.background: [90]#000000
+! URxvt.foreground: Gray
 URxvt.font: xft:inconsolata:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
 URxvt.boldFont: xft:inconsolata:bold:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
 URxvt.depth: 32
-URxvt.background: [90]#000000
 URxvt.saveLines: 12000
 URxvt.scrollBar_right: true
 URxvt.scrollstyle: rxvt
@@ -15,6 +16,36 @@ URxvt.internalBorder: 6
 URxvt.colorMode: on
 URxvt.perl-ext-common: default
 
+URxvt*background: #2B2B2B
+URxvt*foreground: #DEDEDE
+
+URxvt*colorUL : #86a2b0
+
+! black
+URxvt*color0  : #2E3436
+URxvt*color8  : #555753
+! red
+URxvt*color1  : #CC0000
+URxvt*color9  : #EF2929
+! green
+URxvt*color2  : #4E9A06
+URxvt*color10 : #8AE234
+! yellow
+URxvt*color3  : #C4A000
+URxvt*color11 : #FCE94F
+! blue
+URxvt*color4  : #3465A4
+URxvt*color12 : #729FCF
+! magenta
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
+! cyan
+URxvt*color6  : #06989A
+URxvt*color14 : #34E2E2
+! white
+URxvt*color7  : #D3D7CF
+URxvt*color15 : #EEEEEC
+
 Xft.antialias: 1
 Xft.autohint: 0
 Xft.dpi: 96
@@ -23,4 +54,4 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-cairo-dock.override-redirect: true
+!cairo-dock.override-redirect: true
