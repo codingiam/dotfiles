@@ -21,4 +21,10 @@
 (setq-default buffer-quit-function
  #'(lambda () (message "Are you trying to quit?")))
 
+(require-package 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+(require-package 'evil)
+(evil-mode 0)
+
 (provide 'init-local)
