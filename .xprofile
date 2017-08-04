@@ -22,6 +22,7 @@ xmonad)
 i3)
 	compton -bc
 	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	pasystray &
 	xautolock -time 15 -locker i3lock &
 	urxvtd -f -o -q
 	feh --no-fehbg --bg-scale ~/Pictures/desktop-background.png
