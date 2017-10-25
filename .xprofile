@@ -5,7 +5,7 @@
 
 session=${1:-i3}
 
-# echo $session > ~/xprofile.log
+# echo -e "$@\n$session" > ~/xprofile.log
 
 nvidia-settings --load-config-only
 
@@ -37,6 +37,6 @@ icewm-session)
 	urxvtd -f -o -q
 	;;
 *)
-	exec $1
+	xterm &
 	;;
 esac
