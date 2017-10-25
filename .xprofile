@@ -3,7 +3,7 @@
 # ~/.xprofile
 #
 
-session=${1:-i3}
+session=$1
 
 # echo -e "$@\n$session" > ~/xprofile.log
 
@@ -37,6 +37,9 @@ icewm-session)
 	urxvtd -f -o -q
 	;;
 *)
-	xterm &
+	[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+	xsetroot -cursor_name left_ptr
+	copyq &
+	xterm
 	;;
 esac
