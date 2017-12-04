@@ -1,20 +1,21 @@
 URxvt*dynamicColors: on
-! URxvt.background: [90]#000000
-! URxvt.foreground: Gray
-URxvt.font: xft:inconsolata:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
-URxvt.boldFont: xft:inconsolata:bold:encoding=iso10646-1:antialias=true:hinting=true:size=12:dpi=100
-URxvt.depth: 32
-URxvt.saveLines: 12000
-URxvt.scrollBar_right: true
-URxvt.scrollstyle: rxvt
-URxvt.scrollBar: false
-URxvt.scrollTtyOutput: false
-URxvt.scrollWithBuffer: true
-URxvt.scrollTtyKeypress: true
-URxvt.cursorBlink: true
-URxvt.internalBorder: 6
-URxvt.colorMode: on
-URxvt.perl-ext-common: default
+! URxvt*background: [90]#000000
+! URxvt*foreground: Gray
+URxvt*font: xft:inconsolata-15:style=regular:encoding=iso10646-1:antialias=true:hinting=true:dpi=96
+URxvt*boldFont: xft:inconsolata-15:style=bold:encoding=iso10646-1:antialias=true:hinting=true:dpi=96
+URxvt*geometry: 80x25
+URxvt*depth: 32
+URxvt*saveLines: 12000
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: rxvt
+URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt*cursorBlink: true
+URxvt*internalBorder: 6
+URxvt*colorMode: on
+URxvt*perl-ext-common: default
 
 URxvt*background: #2B2B2B
 URxvt*foreground: #DEDEDE
@@ -54,4 +55,4 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
 
-!cairo-dock.override-redirect: true
+! cairo-dock.override-redirect: true
