@@ -67,7 +67,7 @@ set wrapscan
 set spell
 
 " Show line numbers.
-set number
+set number relativenumber
 
 " When a bracket is inserted, briefly jump to the matching
 " one. The jump is only done if the match can be seen on the
